@@ -48,8 +48,7 @@ public class RobotAgent<R extends AbstractRobotSimulator> extends Agent {
 		Vector3d position = this.getPosition();
 
 		if (!isAtPosition(this.destination)) {
-			double angle = -Math.atan2((destination.getZ() - position.z), (destination.getX() - position.x)) * 180
-					/ Math.PI;
+			double angle = -Math.atan2((this.destination.getZ() - position.z), (this.destination.getX() - position.x));
 
 			this.rotateY(angle);
 			this.setTranslationalVelocity(1);
